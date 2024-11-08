@@ -11,12 +11,12 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 69%;
     max-width: 360px;
     text-align: center;
     background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 30px;
+    /* border-radius: 15px; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 2px solid #e1bee7;
 }
@@ -30,7 +30,7 @@ h1 {
 
 /* 入力フィールド */
 input {
-    width: 100%;
+    width: 84%;
     padding: 12px;
     margin-bottom: 15px;
     border: 2px solid #e1bee7;
