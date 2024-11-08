@@ -1,42 +1,122 @@
+/* ベーススタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #f8f0fc;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
+    width: 90%;
+    max-width: 360px;
     text-align: center;
     background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #e1bee7;
 }
 
+/* タイトル */
+h1 {
+    color: #9c27b0;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* 入力フィールド */
 input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #e1bee7;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
+input:focus {
+    border-color: #ba68c8;
+}
+
+/* ボタングループ */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.factorize-btn {
+    flex: 2;
+    padding: 10px 0;
+    background-color: #ba68c8;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
+.clear-btn {
+    flex: 1;
+    padding: 8px 0;
+    background-color: #f48fb1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#result {
+.factorize-btn:hover {
+    background-color: #ab47bc;
+}
+
+.clear-btn:hover {
+    background-color: #f06292;
+}
+
+/* 結果の表示 */
+.result-box {
     margin-top: 20px;
+    padding: 15px;
+    background: #fce4ec;
+    border-radius: 10px;
     font-size: 18px;
+    color: #6a1b9a;
+    word-wrap: break-word;
+    border: 1px dashed #ec407a;
+}
+
+/* メディアクエリ (iPhone対応) */
+@media (max-width: 390px) {
+    .container {
+        width: 95%;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .factorize-btn {
+        padding: 8px 0;
+        font-size: 14px;
+    }
+
+    .clear-btn {
+        padding: 6px 0;
+        font-size: 12px;
+    }
+
+    .result-box {
+        font-size: 16px;
+    }
 }
