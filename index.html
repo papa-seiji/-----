@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>素因数分解ツール</title>
+    <title>Prime Factorization Tool</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>素因数分解ツール</h1>
-        <input type="number" id="inputNumber" placeholder="整数を入力してください" min="2">
-        <button onclick="factorize()">素因数分解</button>
-        <div id="result"></div>
+        <h1>Prime Factorization Tool</h1>
+        <input type="number" id="inputNumber" placeholder="Enter a positive integer" min="2">
+        <div class="button-group">
+            <button class="factorize-btn" onclick="factorize()">Factorize</button>
+            <button class="clear-btn" onclick="clearInput()">Clear</button>
+        </div>
+        <div id="result" class="result-box"></div>
     </div>
     <script src="script.js"></script>
 </body>
